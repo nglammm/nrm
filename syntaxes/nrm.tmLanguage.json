@@ -1,0 +1,23 @@
+{
+    "scopeName": "source.nrm",
+    "patterns": [
+        {
+            "name": "keyword.control.nrm",
+            "match": "\\b(let|variable|constant|is|be|null|true|false)\\b"
+        },
+        {
+            "name": "constant.numeric.nrm",
+            "match": "\\b\\d+\\b"
+        },
+        {
+            "name": "variable.other.nrm",
+            "match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+        },
+        {
+            "name": "punctuation.operator.nrm",
+            "match": "[=+\\-*/()]"
+        }
+    ],
+    "repository": {},
+    "scopeName": "source.nrm"
+}

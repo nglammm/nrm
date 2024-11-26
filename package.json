@@ -1,0 +1,37 @@
+{
+    "name": "nrm-language",
+    "displayName": "NRM Language",
+    "description": "Syntax highlighting for NRM language.",
+    "version": "0.1.0",
+    "publisher": "NRMGroup",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "contributes": {
+        "languages": [{
+            "id": "nrm",
+            "aliases": ["NRM", "nrm"],
+            "extensions": [".nrm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nrm",
+            "scopeName": "source.nrm",
+            "path": "./syntaxes/nrm.tmLanguage.json"
+        }]
+    },
+    "activationEvents": [
+        "onLanguage:nrm"
+    ],
+    "main": "./out/extension.js",
+    "scripts": {
+        "vscode:prepublish": "npm run compile",
+        "compile": "tsc -p ./",
+        "watch": "tsc -watch -p ./",
+        "postinstall": "node ./out/cli.js"
+    },
+    "devDependencies": {
+        "typescript": "^4.0.0",
+        "vscode": "^1.60.0"
+    }
+}
