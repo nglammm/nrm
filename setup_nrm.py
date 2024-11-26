@@ -2,7 +2,6 @@ import os
 import sys
 import platform
 import subprocess
-import data
 
 
 def install_requirements():
@@ -26,6 +25,7 @@ def create_batch_file(nrm_path):
 
     print(f'Batch file created at: {batch_file_path}')
     print('You may need to add the directory to your PATH if it is not already included.')
+    import data
     data.main()
 
 
@@ -38,6 +38,7 @@ def create_shell_script(nrm_path):
         f.write(shell_script_content)
 
     os.chmod(shell_script_path, 0o755)  # Make it executable
+    import data
     data.main()
     print('[SUCCESS] You can run it by typing `nrm` in your terminal.')
 
